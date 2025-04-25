@@ -1,0 +1,55 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+}
+
+header{
+    padding: 2rem 1rem; /* preenchimento superior e inferior com (2rem),preenchimeto laterais esquerda e direita */
+    background-color: aquamarine;
+}
+
+.container{
+    padding: 5rem 2rem;
+    background-color: blueviolet;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Fara com que as caixas possam ser quebradas se necessário (quando não houver espaço) */
+    align-content: center; /* propriedade que sera usada para alinhar as caixas quando quebradas */
+}
+
+.container div{
+    border: 2px solid orange; /* (2px = espessura da caixa da borda) (solid = tipo da borda) (orange = cor da borda) */
+    width: 20rem; /* largura da caixa */
+    height: 20rem; /* altura da caixa */
+    margin: 10px; /* Espaçamento de todos os lados extewrnos da caixa externos da caixa usando o margin */
+    min-width: 299px; /* limitando o tamanho minimop que a caixa tera (ela não ficara menor que 299px) */
+}
+.Dom-Bosco{
+    background-color: brown;
+}
+.Dom-Bosco div{
+    border: 2px solid blue; /* (2px = espessura da caixa da borda) (solid = tipo da borda) (orange = cor */
+    font-size: 25px;
+}
+.vingas{
+    background-image: url(../imagens/Vingas.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.Manuel-Gomes{
+    background-color: darkred;
+
+}
+
+.Manuel-Gomes div{
+    border: 2px solid yellow; /* (2px = espessura da caixa da borda) (solid = tipo da borda) (orange = cor */
+    font-size: 25px;
+}
+
+@media (max-width: 350px)
+{
+
+}
