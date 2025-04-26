@@ -1,55 +1,154 @@
-*{
+/* Resetando margens e preenchimentos padrão de todos os elementos e definindo box-sizing como border-box */
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    color: white;
 }
 
-header{
-    padding: 2rem 1rem; /* preenchimento superior e inferior com (2rem),preenchimeto laterais esquerda e direita */
-    background-color: aquamarine;
+/* Estilização do cabeçalho */
+header {
+    padding: 2rem 1rem; /* preenchimento vertical de 2rem e horizontal de 1rem */
+    background-color: #493d3f; /* cor de fundo do cabeçalho */
 }
 
-.container{
-    padding: 5rem 2rem;
-    background-color: blueviolet;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap; /* Fara com que as caixas possam ser quebradas se necessário (quando não houver espaço) */
-    align-content: center; /* propriedade que sera usada para alinhar as caixas quando quebradas */
+/* Container principal */
+.container {
+    padding: 6rem 3rem; /* preenchimento vertical de 6rem e horizontal de 3rem */
+    background-color: blueviolet; /* cor de fundo */
+    display: flex; /* usa flexbox para layout dos elementos filhos */
+    justify-content: space-evenly; /* espaço igual entre os elementos filhos */
+    flex-wrap: wrap; /* permite que os elementos quebrem linha se não houver espaço */
+    align-content: flex-end; /* alinha o conteúdo quebrado ao final do container */
 }
 
-.container div{
-    border: 2px solid orange; /* (2px = espessura da caixa da borda) (solid = tipo da borda) (orange = cor da borda) */
-    width: 20rem; /* largura da caixa */
-    height: 20rem; /* altura da caixa */
-    margin: 10px; /* Espaçamento de todos os lados extewrnos da caixa externos da caixa usando o margin */
-    min-width: 299px; /* limitando o tamanho minimop que a caixa tera (ela não ficara menor que 299px) */
-}
-.Dom-Bosco{
-    background-color: brown;
-}
-.Dom-Bosco div{
-    border: 2px solid blue; /* (2px = espessura da caixa da borda) (solid = tipo da borda) (orange = cor */
-    font-size: 25px;
-}
-.vingas{
-    background-image: url(../imagens/Vingas.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
+/* Estilização das divs dentro do container */
+.container div {
+    width: 30rem; /* largura fixa das caixas */
+    height: 20rem; /* altura fixa das caixas */
+    margin: 10px; /* margem externa de 10px de todos os lados */
+    min-width: 299px; /* largura mínima da caixa para evitar encolhimento excessivo */
 }
 
-.Manuel-Gomes{
-    background-color: darkred;
-
+/* Seção 01 com imagem de fundo */
+.sessao01 {
+    background-image: url(../imagens/1295376.png); /* imagem de fundo */
+    background-position: center; /* centraliza a imagem */
+    background-size: cover; /* faz a imagem cobrir todo o espaço */
+    background-repeat: no-repeat; /* evita repetição da imagem */
+    justify-content: start; /* alinha o conteúdo ao início (esquerda no eixo principal) */
 }
 
-.Manuel-Gomes div{
-    border: 2px solid yellow; /* (2px = espessura da caixa da borda) (solid = tipo da borda) (orange = cor */
-    font-size: 25px;
+/* Primeira div com textos */
+.div01 {
+    color: white; /* cor do texto branca */
+    display: flex; /* usa flexbox para layout interno */
+    flex-direction: column; /* organiza os elementos em coluna */
+    gap: 20px; /* espaçamento entre os elementos internos */
+    font-size: 1.3rem; /* tamanho base da fonte */
 }
 
-@media (max-width: 350px)
-{
+/* Parágrafos dentro de .div01 */
+.div01 p {
+    font-size: 2rem; /* tamanho maior para os parágrafos */
+}
 
+/* Botões dentro de .div01 */
+.div01 button {
+    padding: 0.5rem; /* espaçamento interno */
+    border-radius: 5px; /* bordas arredondadas */
+    width: 15rem; /* largura fixa */
+    background-color: #464543; /* cor de fundo do botão */
+    color: white; /* cor do texto */
+    font-weight: 700; /* peso da fonte (negrito) */
+    border: none; /* remove a borda padrão */
+}
+
+/* Estilo para elementos <span> */
+span {
+    color: yellow; /* cor do texto amarela */
+    font-size: 3rem; /* tamanho grande da fonte */
+}
+
+/* Estilo para seção dombosco */
+.dombosco {
+    background-color: #493d3f; /* cor de fundo */
+}
+
+/* Estilização de imagem dentro da classe .div-img */
+.div-img img {
+    width: 20rem; /* largura fixa da imagem */
+    border-radius: 10px; /* bordas arredondadas da imagem */
+}
+
+/* Parágrafos dentro de .div-paragrafo */
+.div-paragrafo p {
+    color: white; /* cor do texto branca */
+    font-size: 1.8rem; /* tamanho da fonte */
+    margin-top: 1.5rem; /* margem superior */
+}
+
+/* Seção 03 com fundo cinza */
+.sessao03 {
+    background-color: #5a5955; /* cor de fundo */
+}
+
+/* Container da seção 4 com alinhamento centralizado */
+.div-sessao4 {
+    display: flex; /* usa flexbox */
+    justify-content: center; /* centraliza horizontalmente */
+    align-items: center; /* centraliza verticalmente */
+}
+
+/* Seção 04 com imagem de fundo fixa */
+.sessao04 {
+    background-image: url(../imagens/img\ cofre\ fundo.jpg); /* imagem de fundo */
+    background-attachment: fixed; /* imagem fixa no scroll */
+    background-size: cover; /* cobre todo o container */
+    background-position: center; /* centraliza a imagem */
+}
+
+/* Botão da seção 04 */
+.sessao04 button {
+    padding: 0.5rem; /* espaçamento interno */
+    border-radius: 5px; /* borda arredondada */
+    width: 15rem; /* largura fixa */
+    background-color: #464543; /* cor de fundo */
+    color: white; /* cor do texto */
+    font-weight: 700; /* texto em negrito */
+    border: none; /* sem borda */
+}
+
+/* Estilização do rodapé */
+footer {
+    padding: 2rem 1rem; /* preenchimento vertical e horizontal */
+    background-color: #493d3f; /* cor de fundo */
+}
+
+/* Regras para telas com largura máxima de 768px (responsividade) */
+@media (max-width: 768px) {
+    /* Centraliza os itens da div01 em dispositivos menores */
+    .div01 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* Ajusta tamanho e margem dos parágrafos em telas menores */
+    .div01 p {
+        font-size: 1.6rem;
+        margin: 25px;
+    }
+
+    /* Ajusta a seção 03 para centralizar conteúdo e aplicar espaçamento */
+    .sessao03 {
+        gap: 5rem; /* espaçamento entre os elementos */
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* Ajusta o botão da seção 4 para telas menores */
+    .div-sessao4 button {
+        width: 12rem; /* reduz a largura */
+        border: none; /* sem borda */
+    }
 }
